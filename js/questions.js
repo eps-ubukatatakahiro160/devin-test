@@ -68,7 +68,7 @@ const QUESTIONS = [
     question: "リモートの変更を取得し、現在のブランチへの統合まで行うコマンドはどれ？",
     choices: ["git fetch", "git clone", "git pull", "git remote"],
     answer: 2,
-    explanation: "git pull は git fetch（取得）と git merge（統合）を続けて実行します。git fetch は取得のみです。",
+    explanation: "git pull は git fetch（取得）と統合（既定では merge、pull.rebase 設定時は rebase）を続けて実行します。git fetch は取得のみです。",
   },
   {
     category: "Git",
@@ -82,7 +82,7 @@ const QUESTIONS = [
     question: "Git で追跡しないファイルやディレクトリを指定するためのファイルはどれ？",
     choices: [".gitconfig", ".gitignore", ".gitkeep", ".gitattributes"],
     answer: 1,
-    explanation: ".gitignore に記述したパターンに一致するファイルは、追跡対象外になります。",
+    explanation: ".gitignore に記述したパターンに一致する未追跡ファイルは、追跡対象外になります（すでに追跡中のファイルには効きません）。",
   },
 ];
 
