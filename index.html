@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WSL & Git クイズ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <section id="start-screen" class="screen">
+      <h1>WSL &amp; Git クイズ</h1>
+      <p class="lead">WSL と Git に関する全10問の単一選択式クイズです。<br>4つの選択肢から正しいものを1つ選んでください。</p>
+      <button id="start-btn" class="btn primary" type="button">開始</button>
+    </section>
+
+    <section id="quiz-screen" class="screen hidden">
+      <div class="quiz-header">
+        <span id="progress" class="progress"></span>
+        <span id="category" class="category"></span>
+      </div>
+      <h2 id="question" class="question"></h2>
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback hidden" aria-live="polite">
+        <p id="feedback-result" class="feedback-result"></p>
+        <p id="feedback-explanation" class="feedback-explanation"></p>
+      </div>
+      <button id="next-btn" class="btn primary hidden" type="button">次へ</button>
+    </section>
+
+    <section id="result-screen" class="screen hidden">
+      <h1>結果</h1>
+      <p id="score" class="score"></p>
+      <p id="score-message" class="score-message"></p>
+      <ol id="review" class="review"></ol>
+      <button id="restart-btn" class="btn primary" type="button">もう一度</button>
+    </section>
+  </main>
+
+  <script src="js/questions.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
